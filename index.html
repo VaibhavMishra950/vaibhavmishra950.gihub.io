@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  <!--  <link rel="stylesheet" href="fapro/css/all.css"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style type="text/css">
+
+        body {
+            background: #262626;
+            color: white;
+            font-family: 'Jost';
+            -webkit-user-select: none;
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+            /* Firefox all */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+            /* Likely future */
+
+        }
+
+        .box {
+            filter: blur(0px);
+            opacity: 1;
+            color: white;
+            box-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
+            width: 280px;
+            padding: 15px 20px;
+            margin-top: 20px;
+            transition: .5s;
+        }
+
+        .btn {
+
+            -webkit-user-select: none;
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+            /* Firefox all */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+            /* Likely future */
+            float: left;
+            background: none;
+            padding: 5px 20px;
+            color: royalblue;
+            border: 2px solid royalblue;
+            outline: none;
+            font-family: 'Jost';
+            border-radius: 10px;
+            text-decoration: none;
+            transition: .5s;
+
+        }
+        .btn:hover{
+            color: white;
+            background: royalblue;
+            transition: .5s;
+            
+        }
+        
+        .text {
+            font-family: 'Poppins';
+        }
+
+        .social {
+            margin: 20px 0px;
+
+        }
+        i {
+            margin: 10px 10px;
+            padding: 10px 10px;
+            border-radius: 50%;
+
+        }
+        .more {
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid royalblue;
+            width: 300px;
+            padding: 20px 15px;
+            transition: 1s;
+        }
+
+        h2 {
+            margin: 3px 0px 7px 0px;
+        }
+        .social a:nth-child(1) {
+            color: #1877f2;
+        }
+        .social a:nth-child(2) {
+            color: #c32aa3;
+        }
+        .social a:nth-child(3) {
+            color: #1da1f2;
+        }
+        .social a:nth-child(4) {
+            color: #ff0000;
+        }
+        .social a:nth-child(1) i {
+            box-shadow: 0 0 5px #1877f2, 0 0 10px #1877f2;
+        }
+        .social a:nth-child(2) i {
+            box-shadow: 0 0 5px #c32aa3, 0 0 10px #c32aa3;
+        }
+        .social a:nth-child(3) i {
+            box-shadow: 0 0 5px #1da1f2, 0 0 10px #1da1f2;
+        }
+        .social a:nth-child(4) i {
+            box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+        }
+
+
+
+        #cls {
+            color: white;
+
+        }
+
+        img {
+            height: 110px;
+            width: 110px;
+            border-radius: 50%;
+
+        }
+        .projects a {
+            color: #FF8024;
+            text-decoration: none;
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <div class="box" id="main">
+            <h2>ABOUT ME</h2>
+            <img src="pic.jpg">
+            <p class="text" align="justify">
+                <span style="text-shadow: 0 0 5px royalblue, 0 0 10px royalblue, 0 0 20px royalblue;">Vaibhav Mishra <br>Student</span>
+                <br>
+                <br> <br>
+                Learning Python Programming And Web Development.
+            </p>
+            <br>
+            <a href="tel:9752462712" class="btn">Call Me &nbsp;<span class="fa fa-phone"></span> </a><br>
+            <br>
+            <div class="social">
+                <a href="https://www.facebook.com/vaibhavmishra09" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vaibhavmishra09" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/Vaibhav83631875" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCJF2izOdMhN-Mq3Gb5utJqA" target="_blank"><i class="fab fa-youtube"></i></a>
+
+
+            </div>
+            <br>
+            <div class="projects">
+                <span align="justify">
+                    <h3>Projects: </h3>
+                    <ul type="disc">
+                        <li><a href="https://vaibhavmishra950.github.io/PasswordGenerator/">Password Generator</a></li>
+                        <li><a href="https://vaibhavmishra950.github.io/CustomCheckbox/">Custom Checkbox Design</a></li>
+
+                    </ul>
+                </span>
+            </div>
+        </div>
+
+    </center>
+</body>
+</html>

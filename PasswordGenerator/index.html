@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Password Generator</title>
+<meta name="viewport" content="width=device-width initial-scale=1.0" >
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+<style type="text/css">
+
+
+.box {
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+padding:10px;
+-webkit-background-origin: content-box;
+background-origin: content-box;shadow:0 0 5px black;
+width:300px;
+border-radius:10px;
+}
+h3{
+color: royalblue;
+font-family:'Ubuntu';
+}
+input{
+font-family:'Ubuntu';
+margin:10px 5px;
+width:270px;
+height:40px;
+border:2px solid royalblue;
+color: royalblue;
+padding:5px 10px;
+border-radius:10px;
+font-size:16px;
+}
+input::selection{
+color:white;
+background:royalblue;
+}
+button{
+color: rgba(255,255,255,1);
+background: royalblue;
+margin:5px 5px;
+padding:10px 23px;
+border:none;
+border-radius:10px;
+font-family:'Ubuntu';
+font-size:16px;
+
+}
+.opt{
+   font-family:'Ubuntu';
+   margin:10px 5px;
+   width:290px;
+   height:50px;
+   border:2px solid royalblue;
+   color: royalblue;
+   padding:5px 10px;
+   border-radius:10px;
+   font-size:16px;
+   background:none;
+}
+*{outline:none;}
+</style>
+</head>
+<body>
+<div class="box" >
+  <h3>Random Password Generator</h3>
+   <input type="text" id="pass" readonly="readonly" placeholder="Generate Password" >
+   <select class="opt" id="opt" >
+   <option disabled="disabled" selected="selected"  required="required" >Password Length</option>
+   <option value="8" >8 Characters Long</option>
+   <option value="12" >12 Characters Long</option>
+   <option value="16" >16 Characters Long</option>
+   <option value="20" >20 Characters Long</option>
+   </select>
+   <button onclick="generate()">Generate Password</button>
+   <button onclick="copy()">Copy</button>
+
+</div>
+<script type="text/javascript">
+function generate(){
+var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#_&-+()/?!;:*^={}\%[]"
+var len = document.getElementById('opt').value;
+var password = "";
+
+for (var i=0; i<len; i++){
+var randnum = Math.floor(Math.random() * chars.length);
+password += chars.charAt(randnum);
+}
+document.getElementById('pass').value = password;
+
+}
+
+function copy(){
+var x = document.getElementById('pass');
+x.select();
+document.execCommand('copy');
+}
+
+</script>
+</body>
+</html>
