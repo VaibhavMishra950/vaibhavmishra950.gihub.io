@@ -6,9 +6,22 @@
     <link rel="icon" href="pic.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <!--  <link rel="stylesheet" href="fapro/css/all.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <style type="text/css">
+
+    :root {
+        --fb: #1877f2;
+        --insta: #c32aa3;
+        --twit: #1da1f2;
+        --yt: #ff0000;
+        --li: #2867B2;
+    }
+
+
+        * {
+            font-family: 'Jost';
+        }
 
         body {
             background: #262626;
@@ -30,10 +43,18 @@
             opacity: 1;
             color: white;
             box-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
-            width: 280px;
+            width: 80%;
             padding: 15px 20px;
             margin-top: 20px;
             transition: .5s;
+            display: flex;
+
+        }
+
+        .part1, .part2 {
+            width: 38%;
+            margin: auto;
+
         }
 
         .btn {
@@ -54,44 +75,57 @@
             border-radius: 10px;
             text-decoration: none;
             transition: .5s;
+            margin: auto 5px;
 
 
         }
-        .btn:hover{
+        .btn:hover {
             color: white;
             transition: .5s;
-            
+
         }
-        .call{
-        color:royalblue;
-        border:2px solid royalblue;
+        .call {
+            color: royalblue;
+            border: 2px solid royalblue;
         }
-        
-        .call:hover{background:royalblue;}
-        
-        .whatsapp{
-        color:#128C7E;
-        border:2px solid #128C7E;
-        float:right;
+
+        .call:hover {
+            background: royalblue;
         }
-        
-        .whatsapp:hover{background:#128C7E;}
-        
-        
+
+        .whatsapp {
+            color: #128C7E;
+            border: 2px solid #128C7E;
+            float: right;
+        }
+
+        .whatsapp:hover {
+            background: #128C7E;
+        }
+
+
         .text {
             font-family: 'Poppins';
         }
 
         .social {
             margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
 
         }
         i {
             margin: 8px 8px;
             padding: 10px 10px;
-            border-radius: 50%;
+            width: 80%;
+            border-radius: 30px;
+            letter-spacing: 2px;
+            white-space: pre;
+            transition: .5s;
 
         }
+
+
         .more {
             opacity: 0;
             position: absolute;
@@ -107,37 +141,61 @@
         h2 {
             margin: 3px 0px 7px 0px;
         }
+        
+        
         .social a:nth-child(1) {
-            color: #1877f2;
+            color: var(--fb);
         }
         .social a:nth-child(2) {
-            color: #c32aa3;
+            color: var(--insta);
         }
         .social a:nth-child(3) {
-            color: #1da1f2;
+            color: var(--twit);
         }
         .social a:nth-child(4) {
-            color: #ff0000;
+            color: var(--yt);
         }
         .social a:nth-child(5) {
-            color: #2867B2;
+            color: var(--li);
+
+        }
         
+        i:hover{color: white;}
+  
+  
+        .social a:nth-child(1) i:hover {
+            background: var(--fb);
+        }
+        .social a:nth-child(2) i:hover {
+            background: var(--insta);
+        }
+        .social a:nth-child(3) i:hover {
+            background: var(--twit);
+        }
+        .social a:nth-child(4) i:hover {
+            background: var(--yt);
+        }
+        .social a:nth-child(5) i:hover {
+            background: var(--li);
+
         }
 
+
+
         .social a:nth-child(1) i {
-            box-shadow: 0 0 5px #1877f2, 0 0 10px #1877f2;
+            box-shadow: 0 0 5px var(--fb), 0 0 10px var(--fb);
         }
         .social a:nth-child(2) i {
-            box-shadow: 0 0 5px #c32aa3, 0 0 10px #c32aa3;
+            box-shadow: 0 0 5px var(--insta), 0 0 10px var(--insta);
         }
         .social a:nth-child(3) i {
-            box-shadow: 0 0 5px #1da1f2, 0 0 10px #1da1f2;
+            box-shadow: 0 0 5px var(--twit), 0 0 10px var(--twit);
         }
         .social a:nth-child(4) i {
-            box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+            box-shadow: 0 0 5px var(--yt), 0 0 10px var(--yt);
         }
         .social a:nth-child(5) i {
-            box-shadow: 0 0 5px #2867B2, 0 0 10px #2867B2;
+            box-shadow: 0 0 5px var(--li), 0 0 10px var(--li);
         }
 
 
@@ -155,46 +213,79 @@
         .projects a {
             color: #FF8024;
             text-decoration: none;
-            
+
 
         }
         
+    @media only screen and (max-width: 600px){
+        .box{
+            flex-direction: column;
+            width: 315px;
+        }
+        
+        span.text{
+            display: none;
+        }
+        
+        i{
+            margin: 12px 12px;
+            padding: 10px 10px;
+            border-radius: 50%;
+            width: auto;
+        }
+        
+        .part1, .part2 {
+            width: 100%;
+            margin: auto;
+
+        }
+        .social{
+            flex-direction: row;
+        }
+        
+}
+
+
     </style>
 </head>
 <body>
     <center>
         <div class="box" id="main">
-            <h2>ABOUT ME</h2>
-            <img src="pic.jpg">
-            <p class="text" align="justify">
-                <span style="text-shadow: 0 0 5px royalblue, 0 0 10px royalblue, 0 0 20px royalblue;">Vaibhav Mishra <br>Student</span>
+            <div class="part1">
+                <h2>ABOUT ME</h2>
+                <img src="pic.jpg">
+                <p class="text" align="justify">
+                    <span style="text-shadow: 0 0 5px royalblue, 0 0 10px royalblue, 0 0 20px royalblue;">Vaibhav Mishra <br>Student</span>
+                    <br>
+                    <br> <br>
+                    Learning Python Programming And Web Development.
+                </p>
                 <br>
-                <br> <br>
-                Learning Python Programming And Web Development.
-            </p>
-            <br>
-            <a href="tel:9752462712" class="btn call">Call Me &nbsp;<span class="fa fa-phone"></span> </a> 
-            <a href="https://api.whatsapp.com/send/?phone=919752462712&text&app_absent=0" class="btn whatsapp">Whatsapp &nbsp;<span class="fab fa-whatsapp"></span> </a><br>            
-            <br>
-            <div class="social">
-                <a href="https://www.facebook.com/vaibhavmishra09" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/vaibhavmishra09" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.twitter.com/Vaibhav83631875" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/channel/UCJF2izOdMhN-Mq3Gb5utJqA" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/in/vaibhav-mishra-1907341a6" target="_blank"><i class="fab fa-linkedin"></i></a>
-
-
+                <a href="tel:9752462712" class="btn call">Call Me &nbsp;<span class="fa fa-phone"></span> </a>
+                <a href="https://api.whatsapp.com/send/?phone=919752462712&text&app_absent=0" class="btn whatsapp">Whatsapp &nbsp;<span class="fab fa-whatsapp"></span> </a><br>
+                <br>
             </div>
-            <br>
-            <div class="projects">
-                <span align="justify">
-                    <h3>Projects: </h3>
-                    <ul type="disc">
-                        <li><a href="https://vaibhavmishra950.github.io/PasswordGenerator/">Password Generator</a></li>
-                        <li><a href="https://vaibhavmishra950.github.io/CustomCheckbox/">Custom Checkbox Design</a></li>
+            <div class="part2">
+                <div class="social">
+                    <a href="https://www.facebook.com/vaibhavmishra09" target="_blank"><i class="fab fa-facebook"><span class="text">  Facebook</span></i></a>
+                    <a href="https://www.instagram.com/vaibhavmishra09" target="_blank"><i class="fab fa-instagram"><span class="text">  Instagram</span></i></a>
+                    <a href="https://www.twitter.com/Vaibhav83631875" target="_blank"><i class="fab fa-twitter"><span class="text">  Twitter</span></i></a>
+                    <a href="https://www.youtube.com/channel/UCJF2izOdMhN-Mq3Gb5utJqA" target="_blank"><i class="fab fa-youtube"><span class="text">  Youtube</span></i></a>
+                    <a href="https://www.linkedin.com/in/vaibhav-mishra-1907341a6" target="_blank"><i class="fab fa-linkedin"><span class="text">  LinkedIn</span></i></a>
 
-                    </ul>
-                </span>
+
+                </div>
+                <br>
+                <div class="projects">
+                    <span align="justify">
+                        <h3>Projects: </h3>
+                        <ul type="disc">
+                            <li><a href="https://vaibhavmishra950.github.io/PasswordGenerator/">Password Generator</a></li>
+                            <li><a href="https://vaibhavmishra950.github.io/CustomCheckbox/">Custom Checkbox Design</a></li>
+
+                        </ul>
+                    </span>
+                </div>
             </div>
         </div>
 
