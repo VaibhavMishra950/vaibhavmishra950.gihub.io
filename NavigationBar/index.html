@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fapro/css/all.css">
+ 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="item active">
+                <a href="#">
+                    <span class="icon">
+                        <i class="far fa-home"></i>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <span class="icon">
+                        <i class="far fa-code"></i>
+                    </span>
+                    <span class="text">Code</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <span class="icon">
+                        <i class="far fa-user"></i>
+                    </span>
+                    <span class="text">Account</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <span class="icon">
+                        <i class="far fa-camera"></i>
+                    </span>
+                    <span class="text">Photos</span>    
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <span class="icon">
+                        <i class="far fa-cog"></i>
+                    </span>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <div id="ind" class="indicator"></div>
+        </ul>
+    </nav>
+    <script>
+        const list = document.querySelectorAll('.item');
+        const ind = document.getElementById('ind');
+
+            function changeActive() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+
+            list.forEach((item) => item.addEventListener('click', changeActive));
+
+    </script>
+</body>
+</html>
